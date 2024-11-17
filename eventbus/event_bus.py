@@ -23,5 +23,5 @@ class EventBus:
 
     def __call__(self, interface: str,
                  method: str,
-                 data_kwargs: Optional[Dict[str, Any]] = None):
-        return self.on_event(interface, method, data_kwargs)
+                 kwargs: Optional[Dict[str, Any]] = None):
+        return self.on_event(interface, method, kwargs)
