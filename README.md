@@ -1,5 +1,5 @@
 # EventBus
-A simple pythonic single thread IOC (inversion of control) library
+A simple pythonic single threaded IOC (inversion of control) library
 
 # Usage example
 
@@ -27,6 +27,11 @@ if __name__ == '__main__':
 
     # invoking the method
     eb.on_event(interface='data_interface', method='read_data', kwargs={
+        'arg1':1, 'arg2':2
+    })
+    
+    # can also invoke via the class directly
+    eb(interface='data_interface', method='read_data', kwargs={
         'arg1':1, 'arg2':2
     })
 ```
